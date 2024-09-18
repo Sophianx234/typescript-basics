@@ -5,7 +5,8 @@ import InfoBox from "./InfoBox";
 
 type GoalListProps = {
     goals: handleGoalState[];
-    onDelete: (id:number)=>void
+    onDelete: (id:number)=>void;
+    
 }
 
 export default function CourseGoalList({goals, onDelete}:GoalListProps){
@@ -16,7 +17,7 @@ export default function CourseGoalList({goals, onDelete}:GoalListProps){
     }
     let warningBox : ReactNode;
     if(goals.length >=4){
-        warningBox = <InfoBox type="warning">
+        warningBox = <InfoBox type="warning" severity="medium" >
             You're collecting a lot of goals. Don't put too much on your plate!
         </InfoBox>
     }
